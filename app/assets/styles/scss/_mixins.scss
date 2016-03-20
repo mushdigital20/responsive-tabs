@@ -1,0 +1,29 @@
+@mixin round-corner--top($radius) {
+    -webkit-border-radius: $radius 0 0 0;
+    -moz-border-radius: $radius  0 0 0;
+    -ms-border-radius: $radius  0 0 0;
+    border-radius: $radius  0 0 0;
+}
+
+@mixin round-corner--bottom($radius) {
+    -webkit-border-radius: 0 0 0 $radius;
+    -moz-border-radius: 0 0 0 $radius;
+    -ms-border-radius: 0 0 0 $radius;
+    border-radius: 0 0 0 $radius;
+}
+
+@mixin background-gradient{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#dbdbdb+0,adadad+51,afafaf+99,d1d1d1+100 */
+    background: #dbdbdb; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dbdbdb 0%, #adadad 51%, #afafaf 99%, #d1d1d1 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #dbdbdb 0%,#adadad 51%,#afafaf 99%,#d1d1d1 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #dbdbdb 0%,#adadad 51%,#afafaf 99%,#d1d1d1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
+
+}
+
+@mixin mobile {
+  @media screen and (max-width: $small-screen-breakpoint) {
+    @content;
+  }
+}

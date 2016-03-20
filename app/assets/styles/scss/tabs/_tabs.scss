@@ -1,0 +1,130 @@
+.tabs {
+    white-space: nowrap;
+    width: 70%;
+    margin: 0 auto;
+    
+    @include mobile {
+        width: 100%;
+    } 
+     
+    ul {
+        list-style: none;
+        padding-left: 0;
+        float: left;
+        
+        @include mobile {
+            display: none;
+        }
+        
+        li {
+           clear: left;
+           cursor: pointer;
+           overflow: hidden;
+           position: relative;
+           border-top: $border-color-size;
+	       border-left: $border-color-size;
+           border-right: $border-color-size;
+           padding: 5px 15px 5px 15px;
+           margin: 0;
+           @include background-gradient;
+           font-size: 80%;
+           width: 120px;
+        }
+        
+        li.active {
+           font-weight: bold;
+           background-image: none;
+           background-color: white;
+           border-right: none;
+           z-index: 2;
+           width: 121px;
+        }
+        
+        li:first-child {
+           @include round-corner--top(5px);
+        }
+        
+        li:last-child {
+           @include round-corner--bottom(5px);
+           border-bottom: $border-color-size;
+        }
+    }
+    
+    h5{
+        display: none;
+        @include mobile {
+           @include background-gradient;
+           cursor: pointer;
+           width: 100%;
+           display: block;
+           padding: 5px 15px 5px 15px;
+           margin: 0;
+           background-color: $background--light;
+           border-top: $border-color-size;
+        }
+    }
+    
+    h5.active{
+        border-bottom: $border-color-size;
+    }
+    
+    &-item{
+        overflow: auto;
+        border-left: $border-color-size;
+        left: -1px;
+        position: relative;
+        
+        @include mobile {
+                border-left: none;
+            }
+    }
+    
+    &-content{
+        padding: 10px 20px;
+        display: inline-block;
+        vertical-align: top;
+        min-height: 500px;
+        
+        @include mobile {
+            min-height: 400px;
+        }
+        
+        h2 {
+           margin: 0;
+           @include mobile {
+                display: none;
+            }
+           
+        }
+        
+        p{
+            white-space: pre-wrap;
+             @include mobile {
+               width: 100%;
+               padding: 0px 10px;
+            }
+        }
+        
+        .clip-box {
+            float: left;
+            padding: 10px 7px;
+            margin: 0px 20px 20px 0px;
+            border: $border-color-size;
+            box-shadow: 3px 4px 12px $background--dark;
+            
+            @include mobile {
+                margin-top: 15px;
+            }
+            
+            div {
+                overflow: hidden;
+                width: 150px;
+                height: 150px;
+                text-align: center;
+            }
+            img {
+                width: 95%;
+            }
+        }
+    }
+}

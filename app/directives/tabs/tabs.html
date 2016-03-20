@@ -1,0 +1,19 @@
+<div class="tabs">
+    <ul>
+        <li ng-repeat="tab in ctrl.tabs track by $index" ng-class="{'active': ctrl.selectedTab == $index}" rel="tab1" ng-click="ctrl.selectTab($index)">{{ tab.firstName + ' ' + tab.lastName }}</li>
+    </ul>
+    <div class="tabs-item" ng-repeat="tab in ctrl.tabs track by $index">
+         <h5 ng-class="{'active': ctrl.selectedTab == $index}" ng-click="ctrl.selectTab($index)">{{ tab.firstName + ' ' + tab.lastName }}</h5>
+        <div class="tabs-content" ng-show="ctrl.selectedTab == $index">
+           
+            <div class="clip-box">
+                <div>
+                    <img ng-src="{{tab.picture}}">
+                </div>
+            </div>
+            <h2>{{ tab.firstName + ' ' + tab.lastName }}</h2>
+            <p>{{ tab.bio }}</p>
+        </div>
+    </div>
+</div>
+

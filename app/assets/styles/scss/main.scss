@@ -1,0 +1,19 @@
+@import 'vars';
+@import 'mixins';
+@import 'tabs/tabs';
+
+html, body {
+  font-family: Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.app{
+    width: 100%;
+    padding: 0;
+}
